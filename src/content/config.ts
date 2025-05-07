@@ -2,6 +2,17 @@
 import { z, defineCollection } from 'astro:content';
 
 // 2. Define your collection(s)
+
+const albumsCollection = defineCollection({
+  type: "data",
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string().optional(),
+      cover: image(),
+    }),
+});
+
 const blogCollection = defineCollection({
   schema: z.object({
     draft: z.boolean(),
@@ -36,4 +47,5 @@ const teamCollection = defineCollection({
 export const collections = {
   'blog': blogCollection,
   'team': teamCollection,
+  'albums': albums,
 };

@@ -1,0 +1,55 @@
+---
+import Link from "@/components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+import backgroundImage from "@/assets/heroUA.png";
+import { Image } from 'astro:assets';
+---
+
+<header class="my-14">
+    <div class="w-full bg-center bg-cover"
+    style={`background-image: url(${backgroundImage.src})`}>
+      <div class="flex items-center justify-center w-full h-full py-12 bg-black/30 backdrop-invert backdrop-opacity-10">
+        <div class="text-center">
+          <div class="container px-4 mx-auto">
+            <div class="max-w-2xl mx-auto text-center">
+              <span class="text-gray-200 font-semibold uppercase tracking-widest">WELCOME TO UGRO</span>
+              <h2 class="mt-8 mb-6 text-4xl lg:text-5xl font-bold text-gray-100">Sustainable Farming for a Healthier Tomorrow.</h2>
+              <p class="max-w-3xl mx-auto mb-10 text-lg text-gray-300">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum sit cum iure qui, nostrum at sapiente
+                ducimus.
+              </p>    
+              <div class="md:flex-col gap-3 items-center justify-center">
+
+                <Link
+                  href="tel:+31641494158"
+                  class="flex gap-1 items-center justify-center"
+                  rel="noopener">
+                  <Icon class="text-white w-5 h-5" name="bx:phone" />
+                  Contact Us
+                </Link>
+                <Link
+                  size="lg"
+                  style="inverted"
+                  rel="noopener"
+                  alt="About the UGRO farm"
+                  href="https://urgro.farm/about"
+                  class="flex gap-1 items-center justify-center"
+                  target="_blank">
+                  About UGRO
+                  <Icon class="text-black w-4 h-4" name="bx:chevron-right" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+  
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
